@@ -27,5 +27,37 @@
                 <a class="button" href="task3.php">neste</a>
             </div>
         </div>
+        <div>
+            <?php
+                //tomme strenger for form inputt felter
+                $firstname = "";
+                $lastname = "";
+                $lastnameLengtint = 0;
+                
+                if($_POST) {
+                    $firstname = $_POST['fname'];
+                    $lastname = $_POST['lname'];
+
+
+
+                    $firstname = trim(ucwords(strtolower(strip_tags($_POST['fname']))));
+                    $lastname = trim(ucwords(strtolower(strip_tags($_POST['lname']))));
+
+                    $lastnameLengtint = strlen($lastname); 
+                }
+            ?>
+            <form method="post">
+                <label for="fname">Fornavn:</label>
+                <?php 
+                    // echo av form-elementet gjør det mulig å legge til verdien av fornavnet og etternavnet i skjemaet når verdiene sendes.
+                    // Verdiene vil normalt resettes i skjemaet, og gjøre skjemaet tomt etter hver sending.
+                    echo "<input type='text' id='fname' name='fname' value='$firstname'>"; ?>
+                <label for="lname">Etternavn:</label>
+                <?php echo "<input type='text' id='lname' name='lname' value='$lastname'>"; ?>
+                
+                <input type="submit" value="Submit">
+            </form>
+            <p>Førsøk og legg inn html eller php kode i feltene</p>
+        </div>
     </div>
 </body>

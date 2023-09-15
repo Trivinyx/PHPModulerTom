@@ -27,5 +27,43 @@
                 <a class="button" href="">neste</a>
             </div>
         </div>
+        <?php
+            function random_str(
+                $length,
+                $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            ) {
+                $str = '';
+                $max = mb_strlen($keyspace, '8bit') - 1;
+                if ($max < 1) {
+                    throw new Exception('$keyspace must be at least two characters long');
+                }
+                for ($i = 0; $i < $length; ++$i) {
+                    $str .= $keyspace[random_int(0, $max)];
+                }
+                return $str;
+            }
+            function validate(string $input):bool{
+                if(!preg_match('/[0-9]/',$input)){return false;}
+                if(!preg_match('/[a-z]/',$input)){return false;}
+                if(!preg_match('/[A-Z]/',$input)){return false;}
+                return true;
+            }
+            function generatePass():string{
+                $pass = "";
+                $sucsess = false;
+                while(!$sucsess){
+                    $pass = random_str(8);
+                    $sucsess = validate($pass);
+                }
+                return $pass;
+            }
+            $generatedPassword = generatePass();
+            echo "<p> Generert passord:<br> $generatedPassword </p>"
+        ?>
+        <p>
+            <button onclick="window.location.reload(true);">
+                Regenerer passord
+            </button>
+        </p>
     </div>
 </body>
