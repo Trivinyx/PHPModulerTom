@@ -1,0 +1,39 @@
+
+.mainContainer{
+    position: relative;
+}
+.card{
+    background-color: #1abbe4;
+    border-radius: 10px;
+    padding: 1rem; 
+    width: max-content;
+    margin: auto;
+    /* position: relative; */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+.card p{
+    display: flex;
+    justify-content: center;
+    color: rgb(10, 9, 9);
+    font-size: 0.5 rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+.cardContent{
+    
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.card .Bold{
+    font-weight: 700;
+}
+
+li.numbersLI{
+    list-style-type: decimal !important ;
+}
+li.bulletLI{
+    list-style-type:  disc !important;
+}
