@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
     <link rel="stylesheet" type="text/css" href="../Styles/module2.css">
-    <title>Module1</title>
+    <title>module2</title>
 </head>
 <body>
     <div id="HeaderBar">
