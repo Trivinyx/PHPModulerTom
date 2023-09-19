@@ -15,6 +15,7 @@
         <a class="button" href="Module1/module1.php">Module1</a>
         <a class="button" href="Module2/module2.php">Module2</a>
         <a class="button" href="Module3/module3.php">Module3</a>
+        <a class="button" href="Module4/module4.php">Module4</a>
     </div>
     
 </body>
