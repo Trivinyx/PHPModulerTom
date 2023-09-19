@@ -38,7 +38,7 @@
         $wheatWeight = 0.035;
         # variables
         $wheatPerSquare = 1;
-        $wheatTotal = 1;
+        $wheatTotal = 0;
         $wheatTotalWeight = 0;
 
         # loop through all squares to calculate wheat in each square present as table 8x8
@@ -49,10 +49,9 @@
             for ($j = 0; $j < 8; $j++) {
                 echo "<td>";
                 echo $wheatPerSquare;
-                echo "</td>";
-                $wheatPerSquare *= 2;
                 $wheatTotal += $wheatPerSquare;
-                
+                $wheatPerSquare *= 2;
+                echo "</td>";
             }
             echo "</tr>";
         }
