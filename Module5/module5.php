@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <title>Module4</title>
+    <title>Module5</title>
 </head>
 <body>
     <div id="HeaderBar">
@@ -10,7 +10,7 @@
             <a class="navButton" href="../index.php">Home</a>
         </div>
         <div id="Title">
-            <h1>Module 4</h1>
+            <h1>Module 5</h1>
         </div>
     </div>
     <div class="mainContainer">
