@@ -1,0 +1,61 @@
+form.form {
+    display: grid;
+}
+
+form.form>textarea {
+    height: 8rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+.form_buttons {
+    display: flex;
+    gap: 1rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+input.button.big {
+    width: 100%;
+}
+
+input.button.smol {
+    width: 4rem;
+}
+
+.error_msg {
+    color: red;
+}
+
+#output_box {
+    width: 100%;
+    height: 8rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+
+    /* Textarea css */
+    font-family: monospace;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    white-space-collapse: preserve;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    background-color: field;
+    column-count: initial !important;
+}

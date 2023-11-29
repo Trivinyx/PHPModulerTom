@@ -20,8 +20,8 @@
         
         <div class="listContainer">
             <ul class="taskList">
-                <li><a class="button" href="task1.php">Oppgave 1</a></li>
-                <li><a class="button" href="task2.php">Oppgave 2</a></li>
+                <li><a class="button" href="Oppgave_5.pdf" target="_blank">Oppgave 1</a></li>
+                <li><a class="button" href="Oppgave_5.pdf" target="_blank">Oppgave 2</a></li>
                 <li><a class="button" href="task3.php">Oppgave 3</a></li>
                 <li><a class="button" href="task4.php">Oppgave 4</a></li>
                 <li><a class="button" href="task5.php">Oppgave 5</a></li>

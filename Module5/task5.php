@@ -1,8 +1,35 @@
+<?php
+    $grad = $_POST['degree'] ?? 10;
+    $type = $_POST['type'] ?? 'celsius';
+    $fahr_select = '';
+    $result = '-';
+
+    if(isset($_POST['degree'])) {
+        if(strcmp($type, 'celsius') === 0) {
+            // Konvertering fra C til F
+            $calc = ($grad * 1.8) + 32;
+
+            // Kalkulert resultat i fahrenheit
+            $result = number_format((float)$calc, 2, '.', '') . "°F";
+
+        } elseif (strcmp($type, 'fahrenheit') === 0) {
+            // Konvertering fra F til C
+            $calc = ($grad - 32) / 1.8;
+
+            // Vis fahrenheit som valgt
+            $fahr_select = 'selected';
+
+            // Kalkulert resultat i celsius
+            $result = number_format((float)$calc, 2, '.', '') . "°C";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/module4.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/module5.css">
     <title>module4</title>
 </head>
 <body>
@@ -27,7 +54,25 @@
                 <a class="button" href="">neste</a>
             </div>
         </div>
-        
+        <div id="card">
+            <form method="post" class="form">
+                <label for="degree">Grad</label>
+                <input type="number" id="degree" name="degree" value="<?= $grad ?>">
+                
+                <label for="type">Måling</label>
+                <select name="type" id="type">
+                    <option value="celsius">celsius</option>
+                    <option value="fahrenheit" <?= $fahr_select ?>>fahrenheit</option>
+                </select>
+                <span></span>
+                <input type="submit" name="sent" value="Konverter">
+            </form>
+
+            <div id='result'>
+                <div class='label'>Resultat</div>
+                <div class='result_text'><?= $result ?></div>
+            </div>
+        </div>
         </div>
     </div>
 </body>
